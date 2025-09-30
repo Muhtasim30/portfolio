@@ -156,36 +156,6 @@ function toggleAccordion(card) {
   .border-dark-blue { border-color: #1E3A8A; }
 </style>
 
-<!--  Two-Card Image Showcase -->
-<section id="showcase" class="py-16 bg-gray-100">
-  <div class="max-w-6xl mx-auto px-6 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-gray-900">Our Work in Action</h2>
-
-    <div class="grid md:grid-cols-2 gap-8">
-      
-      <!-- Card 1 -->
-      <div class="relative overflow-hidden rounded-3xl shadow-2xl">
-        <div class="flex transition-transform duration-700 ease-in-out" id="slider1">
-          <img src="images\IMG_20250422_120810.jpg" class="w-full flex-shrink-0 h-64 md:h-80 object-cover rounded-3xl" alt="Project 1">
-          <img src="images\IMG-20250420-WA0031.jpg" class="w-full flex-shrink-0 h-64 md:h-80 object-cover rounded-3xl" alt="Project 2">
-          <img src="images\IMG-20250420-WA0041.jpg" class="w-full flex-shrink-0 h-64 md:h-80 object-cover rounded-3xl" alt="Project 3">
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="relative overflow-hidden rounded-3xl shadow-2xl">
-        <div class="flex transition-transform duration-700 ease-in-out" id="slider2">
-          <img src="images\IMG_20250905_235402.jpg" class="w-full flex-shrink-0 h-64 md:h-80 object-cover rounded-3xl" alt="Project 4">
-          <img src="images\IMG_20251001_003740.jpg" class="w-full flex-shrink-0 h-64 md:h-80 object-cover rounded-3xl" alt="Project 5">
-          <img src="images\2025_0906_15253000.jpg" class="w-full flex-shrink-0 h-64 md:h-80 object-cover rounded-3xl" alt="Project 6">
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
 
 
 <!-- Portfolio Samples -->
@@ -424,24 +394,3 @@ function toggleAccordion(card) {
         const active =
   </script>
 
-<script>
-function autoSlider(sliderId, interval = 4000) {
-  const slider = document.getElementById(sliderId);
-  const slides = slider.children;
-  const total = slides.length;
-  let index = 0;
-
-  slider.style.transition = 'transform 0.7s ease-in-out'; // faster transition
-
-
-  setInterval(() => {
-    index = (index + 1) % total;
-    slider.style.transform = `translateX(-${index * 100}%)`;
-  }, interval);
-}
-
-// Initialize both sliders
-autoSlider('slider1', 1500); 
-autoSlider('slider2', 1500);
-
-</script>
